@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programacion IV</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--script src="ruta/archivo.js"></!--script-->
+
+    <div id="app">
+      <Titulo class=" bg-info text-white" name=" Programación IV: Componentes"></Titulo>        
+              
+  </div>
+
+
+    <div id="ejemplo">
+        <h2>Calculadora de longitud  metros a kilometros</h2>
+        
+    
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Ingrese la cantidad en metros</h5>
+                metros: <input type="text" id="dato1">
+                <a href="#" class="btn btn-success" onclick="suma();"> Calcular</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Resultados en kilometros</h5>
+                kilometros: <input type="text" id="res">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+    
+
+
+        <h2>Calculadora de moneda: colón salvadoreño a dolar EE.UU </h2>
+
+        <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Ingrese la moneda en colones</h5>
+                    colon: <input type="text" id="dato2">
+                    <a href="#" class="btn btn-success" onclick="moneda();"> Calcular</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Resultados en Dolares</h5>
+                    Dolar: <input type="text" id="res2">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <h2>Calculadora de masa: Libra a Kilogramo</h2>
+
+        <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Ingrese la cantidad en librs</h5>
+                    libra: <input type="text" id="dato3">
+                    <a href="#" class="btn btn-success" onclick="masa();"> Calcular</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Resultados en kilogramos</h5>
+                    Kilogramo: <input type="text" id="res3">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h2>Calculadora de tiempo: horas  a minutos</h2>
+
+            <div class="row">
+                <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Ingrese la hora</h5>
+                        Hora: <input type="text" id="dato4">
+                        <a href="#" class="btn btn-success" onclick="tiempo();"> Calcular</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Resultados en minutos</h5>
+                        Minutos: <input type="text" id="res4">
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+            
+    
+
+   
+</head>
+<body>
+    
+ 
+
+        
+
+
+<script type="text/javascript">
+    function suma(){
+    var dato1=Number(document.getElementById('dato1').value);
+  
+    res=dato1*1000;
+    document.getElementById('res').value=res;
+
+    }
+
+    function moneda(){
+    var dato2=Number(document.getElementById('dato2').value);
+    
+    res2=dato2*0.11;
+    document.getElementById('res2').value=res2;
+
+    }
+
+    function masa(){
+    var dato3=Number(document.getElementById('dato3').value);
+    
+    res3=dato3*0.453592;
+    document.getElementById('res3').value=res3;
+
+    }
+   
+    function tiempo(){
+    var dato4=Number(document.getElementById('dato4').value);
+    
+    res4=dato4*60;
+    document.getElementById('res4').value=res4;
+
+    }
+   
+   
+   
+    
+
+   </script>
+
+<script>
+  Vue.component('Titulo',{
+      props:['name'],
+      template: '<center><p>{{name}}</center></p>'
+  }
+  )
+
+
+  new Vue({
+      el:'#app'
+  })
+</script>
+
+   
+    
+   
+</body>
+</html>
+
+
